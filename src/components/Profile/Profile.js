@@ -8,6 +8,7 @@ import {TimelineContent, TimelineItem} from "@material-ui/lab";
 import {MyTimeLineItem} from "../TimeLine/TimeLineSeperator/MyTimeLineItem";
 import {Controls} from "../controls/Controls";
 import GetAppIconRounded from '@material-ui/icons/GetApp';
+import Resume from '../../assets/data/Sagar_Resume.pdf';
 
 const CustomItem = ({title, text, link}) => {
     return (
@@ -54,7 +55,7 @@ export const Profile = () => {
                     ))}*/}
                 </MyTimeLine>
                 <div style={{textAlign: 'center'}}>
-                    <Controls.Button  colour='primary' rounded={true} size='small' text=' Download CV ' icon={<GetAppIconRounded disableFocusRipple className={classes.icon}/>}/>
+                    <Controls.Button onClick={()=> {window.open(Resume)}} colour='primary' rounded={true} size='small' text=' Download CV ' icon={<GetAppIconRounded disableFocusRipple className={classes.icon}/>}/>
                 </div>
             </div>
         </Card>
