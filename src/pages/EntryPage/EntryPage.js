@@ -58,7 +58,7 @@ export const EntryPage = (props) => {
                     </AppBar>
                     <Switch>
                         <Card style={{marginTop: '3vh', minHeight: '100vh', backgroundColor: 'white'}}>
-                            <Route exact path='/' component={Resume}/>
+                            <Route path='/' component={Resume}/>
                             {/*<Route exact path='/portfolio' component={Portfolio}/>*/}
                         </Card>
 
