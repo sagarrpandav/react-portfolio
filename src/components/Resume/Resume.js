@@ -14,18 +14,18 @@ export const Resume = () => {
     const classes = useMyTimeLineItemStyles();
     return (
         <Grid container direction='column' style={{padding: '30px'}} spacing={4}>
-            {isMobile ? (<Typography>
-                Please open in desktop for entire react portfolio. Working on making it responsive.
-            </Typography>) : (
+            <Grid item container spacing={4}>
+                <Grid item>
+                    <Title title='About Me'/>
+                </Grid>
+                <Grid item>
+                    <Typography variant='body2'>{resumeData.about}</Typography>
+                </Grid>
+            </Grid>
+            {isMobile ? (
+                <Typography>Please open in desktop for entire react-portfolio. Working on making it responsive.</Typography>
+            ) : (
                 <>
-                    <Grid item container spacing={4}>
-                        <Grid item>
-                            <Title title='About Me'/>
-                        </Grid>
-                        <Grid item>
-                            <Typography variant='body2'>{resumeData.about}</Typography>
-                        </Grid>
-                    </Grid>
                     <Grid item container>
                         <Grid item>
                             <Title title='Resume'/>
