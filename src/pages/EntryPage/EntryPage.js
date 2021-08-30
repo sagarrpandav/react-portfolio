@@ -16,69 +16,57 @@ export const EntryPage = (props) => {
     console.log(isMobile);
     return (
         <Container className={classes.root}>
-            {
-                isMobile ?
-                    (
-                        <Typography>
-                            Please open in desktop. Working on making this page responsive at the moment.
-                        </Typography>
-                    )
-                    :
-                    (
-                        <Grid container spacing={7}>
-                            <Grid item lg={3} md={4} sm={12} xs={12}>
-                                <Profile/>
-                            </Grid>
-                            <Grid item xs>
-                                <AppBar style={{borderRadius: '10px'}} color='white' position='sticky'>
-                                    <Toolbar>
-                                        <Grid container spacing={1} style={{alignItems: 'center'}}>
-                                            <Grid item>
+            <Grid container spacing={7}>
+                <Grid item lg={3} md={4} sm={12} xs={12}>
+                    <Profile/>
+                </Grid>
+                <Grid item xs>
+                    <AppBar style={{borderRadius: '10px'}} color='white' position='sticky'>
+                        <Toolbar>
+                            <Grid container spacing={1} style={{alignItems: 'center'}}>
+                                <Grid item>
 
-                                                <Controls.Button disableElevation
-                                                                 style={{backgroundColor: 'white', color: '#ffc500'}}
-                                                                 text={<Typography style={{fontWeight: 'bold'}}
-                                                                                   variant='body1'> Resume </Typography>}/>
+                                    <Controls.Button disableElevation
+                                                     style={{backgroundColor: 'white', color: '#ffc500'}}
+                                                     text={<Typography style={{fontWeight: 'bold'}}
+                                                                       variant='body1'> Resume </Typography>}/>
 
-                                            </Grid>
-                                            <Grid item>
+                                </Grid>
+                                <Grid item>
 
-                                                {/*                                    <Controls.Button disableElevation
+                                    {/*                                    <Controls.Button disableElevation
                                                      style={{backgroundColor: 'white', color: '#777777'}}
                                                      text={<Typography
                                                          style={{fontWeight: 'bold', textDecorationLine: 'none'}}
                                                          variant='body1'> Portfolio </Typography>}/>*/}
 
-                                            </Grid>
-                                            <Grid item xs/>
-                                            <Grid item>
-                                                {resumeData.socials.linkedin.icon}
-                                            </Grid>
-                                            <Grid item>
-                                                {resumeData.socials.github.icon}
-                                            </Grid>
-                                            <Grid item>
-                                                {resumeData.socials.facebook.icon}
-                                            </Grid>
-                                            <Grid item>
-                                                <Controls.Button rounded colour='primary' icon={<EmojiPeopleIcon/>}
-                                                                 text='Hire Me'/>
-                                            </Grid>
-                                        </Grid>
-                                    </Toolbar>
-                                </AppBar>
-                                <Switch>
-                                    <Card style={{marginTop: '3vh', minHeight: '100vh', backgroundColor: 'white'}}>
-                                        <Route path='/' component={Resume}/>
-                                        {/*<Route exact path='/portfolio' component={Portfolio}/>*/}
-                                    </Card>
-
-                                </Switch>
+                                </Grid>
+                                <Grid item xs/>
+                                <Grid item>
+                                    {resumeData.socials.linkedin.icon}
+                                </Grid>
+                                <Grid item>
+                                    {resumeData.socials.github.icon}
+                                </Grid>
+                                <Grid item>
+                                    {resumeData.socials.facebook.icon}
+                                </Grid>
+                                <Grid item>
+                                    <Controls.Button rounded colour='primary' icon={<EmojiPeopleIcon/>}
+                                                     text='Hire Me'/>
+                                </Grid>
                             </Grid>
-                        </Grid>
-                    )
-            }
+                        </Toolbar>
+                    </AppBar>
+                    <Switch>
+                        <Card style={{marginTop: '3vh', minHeight: '100vh', backgroundColor: 'white'}}>
+                            <Route path='/' component={Resume}/>
+                            {/*<Route exact path='/portfolio' component={Portfolio}/>*/}
+                        </Card>
 
+                    </Switch>
+                </Grid>
+            </Grid>
         </Container>
     )
 }
