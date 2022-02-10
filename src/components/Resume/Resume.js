@@ -45,6 +45,9 @@ export const Resume = () => {
                                                     </Grid>
                                                     <Grid item xs={6} style={{textAlignLast: 'end'}}>
                                                         <Typography variant='caption'
+                                                                    style={{color: 'darkslategray'}}>{exp.company}</Typography>
+                                                        <br/>
+                                                        <Typography variant='caption'
                                                                     style={{color: 'darkslategray'}}>{exp.date}</Typography>
                                                     </Grid>
                                                     <Typography variant='body2'

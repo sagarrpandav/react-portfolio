@@ -36,12 +36,14 @@ export const resumeData = {
     "experiences": [
         {
             title: 'Software Engineer - Development',
+            company: 'Mediaocean',
             location: 'Pune, India',
             date: 'April 2020 - July 2021',
             description: 'Worked as a full-stack developer leveraging backend and frontend technologies such as Java, Spring, Express, NodeJS, Javascript, KnockoutJS ReactJS, for web applications on a daily basis, delivering good quality code in sprints.'
         },
         {
             title: 'Associate Software Engineer - Development',
+            company: 'Mediaocean',
             location: 'Pune, India',
             date: 'July 2018 - March 2020',
             description: 'Worked as a full-stack developer web-development technologies to resolve bugs leading to a cleaner codebase.'
