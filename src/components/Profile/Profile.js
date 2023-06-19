@@ -1,63 +1,75 @@
-import {usePortfolioStyles} from "./profileStyle";
-import {Card, Typography} from "@material-ui/core";
-import Image from "../../assets/FOT_0060  2.JPG";
-import {MyTimeLine} from "../TimeLine/MyTimeLine";
-import {resumeData} from "../../assets/data/resumeData";
-import PersonOutlineIcon from '@material-ui/icons/PersonOutline';
-import {TimelineContent, TimelineItem} from "@material-ui/lab";
-import {MyTimeLineItem} from "../TimeLine/TimeLineSeperator/MyTimeLineItem";
-import {Controls} from "../controls/Controls";
-import GetAppIconRounded from '@material-ui/icons/GetApp';
-import Resume from '../../assets/data/Sagar_Resume.pdf';
+import {TimelineItem, TimelineContent} from "@mui/lab";
+import {Typography} from "@mui/material";
+import {CustomTimeline, CustomTimeLineSeparator} from "../Timeline/CustomTimeline";
+import CustomButton from "../Button/CustomButton";
+import PersonOutlineIcon from '@mui/icons-material/PersonOutline';
+import GetAppIcon from '@mui/icons-material/GetApp';
+import {resumeData} from "../../utils/resumeData";
+import './Profile.css';
 
-const CustomItem = ({title, text, link}) => {
-    return (
-        <TimelineItem>
-            <TimelineContent>
-                <span>
-                    {title}
-                </span>
-                {link ? (<Typography variant=''>
-                    <span>{title}</span>
-                    <a href={link} target='_blank'>{text}</a>
-                </Typography>) : (
-                    <Typography variant=''>
-                        <span>{title}</span>
+const CustomTimelineItem = ({title, text, link}) => (
+    <TimelineItem>
+        <CustomTimeLineSeparator/>
+        <TimelineContent className="timeline_content">
+            {link ? (
+                <Typography className="timelineItem_text">
+                    <span>{title}:</span>{" "}
+                    <a href={link} target="_blank" rel="noopener noreferrer">
                         {text}
-                    </Typography>
-                )}
-            </TimelineContent>
-        </TimelineItem>
-    )
-};
+                    </a>
+                </Typography>
+            ) : (
+                <Typography className="timelineItem_text">
+                    <span>{title}:</span> {text}
+                </Typography>
+            )}
+        </TimelineContent>
+    </TimelineItem>
+);
 
 export const Profile = () => {
-    const classes = usePortfolioStyles();
     return (
-        <Card className={classes.root}>
-            <div className={classes.profile}>
-                <Typography variant='body1' className={classes.name}>{resumeData.name}</Typography>
-                <Typography variant='body2' className={classes.title}>{resumeData.title}</Typography>
+        <div className="profile container_shadow">
+            <div className="profile_name">
+                <Typography className="name">{resumeData.name}</Typography>
+                <Typography className="title">{resumeData.title}</Typography>
             </div>
-            <div className={classes.profileImage}>
-                <img style={{width: '100%'}} src={Image}/>
-            </div>
-            <div className={classes.info}>
-                <MyTimeLine icon={<PersonOutlineIcon/>}>
-                    <MyTimeLineItem title='Name' text={resumeData.name}/>
-                    <MyTimeLineItem title='Title' text={resumeData.title}/>
-                    <MyTimeLineItem title='Email' text={resumeData.email}/>
-                    <MyTimeLineItem title='Birthdate' text={resumeData.birthDate}/>
-                    <MyTimeLineItem title='Linkedin' text={resumeData.socials.linkedin.text} link={resumeData.socials.linkedin.link}/>
-                    {/*{Object.keys(resumeData.socials).map(socialKey => (
-                        <MyTimeLineItem title={socialKey} text={resumeData.socials[socialKey].text}
-                                        link={resumeData.socials[socialKey].link}/>
-                    ))}*/}
-                </MyTimeLine>
-                <div style={{textAlign: 'center'}}>
-                    <Controls.Button onClick={()=> {window.open(Resume)}} colour='primary' rounded={true} size='small' text=' Download CV ' icon={<GetAppIconRounded disableFocusRipple className={classes.icon}/>}/>
+
+            <figure className="profile_image">
+                <img src={require("../../assets/images/profile2.jpeg")} alt=""/>
+            </figure>
+
+            <div className="profile_information">
+                <CustomTimeline icon={<PersonOutlineIcon/>}>
+                    <CustomTimelineItem title="Name" text={resumeData.name}/>
+                    <CustomTimelineItem title="Title" text={resumeData.title}/>
+                    <CustomTimelineItem
+                        title="Email"
+                        text={resumeData.email}
+                        link={`mailto:${resumeData.email}`}
+                    />
+
+                    {Object.keys(resumeData.socials).map((key, idx) => (
+                        <CustomTimelineItem
+                            key={idx}
+                            title={key}
+                            text={resumeData.socials[key].text}
+                            link={resumeData.socials[key].link}
+                        />
+                    ))}
+                </CustomTimeline>
+
+                <div className="button_container" style={{display: "flex"}}>
+                    <a
+                        href={resumeData.resume}
+                        target={"_blank"}
+                        rel="noopener noreferrer"
+                        className="a_nostyles"
+                    >
+                        <CustomButton text={"Download CV"} icon={<GetAppIcon/>}/>
+                    </a>
                 </div>
             </div>
-        </Card>
-    )
-}
+        </div>
+    );
+};
