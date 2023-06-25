@@ -9,6 +9,7 @@ import {
     WebOutlined,
     YouTube
 } from "@mui/icons-material";
+import Resume from "../assets/SAGAR_PANDAV_Resume.pdf";
 
 export const resumeData = {
     name: "Sagar Pandav",
@@ -42,7 +43,7 @@ export const resumeData = {
         },
     },
 
-    resume: null,
+    resume: Resume,
 
     about:
         "I'm a front end engineer with experience developing complex, high profile web applications collaborating with both small and large teams. I specialise in JavaScript, thriving in an agile environment leveraging modern technologies such as React/Next, Redux and Firebase. I pride myself in writing scalable, elegant code — creating simple solutions to complex problems.",

@@ -11,7 +11,7 @@ export const Header = (props) => {
     return (
         <Navbar expand="lg" sticky="top" className="header">
             {/* Home link */}
-            <Nav.Link as={NavLink} to="/" className="header_navlink">
+            <Nav.Link as={NavLink} to="/react-portfolio/" className="header_navlink">
                 <Navbar.Brand className="header_home">
                     <HomeRounded/>
                 </Navbar.Brand>
@@ -24,7 +24,7 @@ export const Header = (props) => {
                     {/* Resume Link */}
                     <Nav.Link
                         as={NavLink}
-                        to="/"
+                        to="/react-portfolio/"
                         className={pathName === "/" ? "header_link_active" : "header_link"}
                     >
                         Resume
@@ -33,7 +33,7 @@ export const Header = (props) => {
                     {/* Portfolio Link */}
                     <Nav.Link
                         as={NavLink}
-                        to="/portfolio"
+                        to="/react-portfolio/portfolio"
                         className={
                             pathName === "/portfolio" ? "header_link_active" : "header_link"
                         }
@@ -54,7 +54,7 @@ export const Header = (props) => {
                             {resumeData.socials[key].icon}
                         </a>
                     ))}
-                    <a href="/#contact" className="a_nostyles">
+                    <a href="/react-portfolio/#contact" className="a_nostyles">
                         <CustomButton text={"Hire Me"} icon={<Telegram/>}/>
                     </a>
                 </div>

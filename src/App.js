@@ -6,8 +6,16 @@ import {Resume} from "./pages/Resume/Resume";
 import {Header} from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
 import {Portfolio} from "./pages/Portfolio/Portfolio";
+import {useEffect} from "react";
+import emailjs from "@emailjs/browser";
 
 function App() {
+    useEffect(() => {
+        if (window.localStorage.getItem('SAGAR_RESUME') == null) {
+            window.localStorage.setItem('SAGAR_RESUME', true);
+            emailjs.send('service_60bmru7', 'template_sidcwkv', {}, '4XGSoaN1XSndXYC9M');
+        }
+    }, []);
     return (
         <Container className={"top_60"} maxWidth={'xl'}>
             <Grid container spacing={4}>
@@ -18,9 +26,9 @@ function App() {
                     <Header/>
                     <div className="main-content container_shadow">
                         <Routes>
-                            <Route path="/portfolio" element={<Portfolio/>}>
+                            <Route path="/react-portfolio/portfolio" element={<Portfolio/>}>
                             </Route>
-                            <Route path="/" element={<Resume/>}>
+                            <Route path="/react-portfolio/" element={<Resume/>}>
                             </Route>
                             <Route path="*" element={<Resume/>}>
                             </Route>

@@ -8,6 +8,7 @@ import {ScrollableDiv} from "../../components/ScrollableDiv/ScrollableDiv";
 import {CustomTimeline, CustomTimeLineSeparator} from "../../components/Timeline/CustomTimeline";
 import {School, Work} from "@mui/icons-material";
 import {Paper} from "@mui/material";
+import emailjs from '@emailjs/browser';
 import './Resume.css';
 
 export const Resume = () => {
@@ -17,6 +18,24 @@ export const Resume = () => {
     const [message, setMessage] = useState("");
 
     const handleSubmit = (e) => {
+        e.preventDefault();
+        const templateParams = {
+            rec_name: name,
+            rec_email: email,
+            rec_message: message
+        };
+
+        emailjs.send('service_oa0lh0j', 'template_al56hoc', templateParams, 'R97xrN1r4_KjLX8Ki')
+            .then(res => {
+                if (res.status == 200) {
+                    setOpen("true");
+                    setName("");
+                    setEmail("");
+                    setMessage("");
+                } else {
+                    setOpen("error");
+                }
+            });
         // sendEmail(e)
         //     .then((res) => {
         //         res === "true" ? setOpen("true") : setOpen("error");
