@@ -1,18 +1,18 @@
 {
   "files": {
     "main.css": "/react-portfolio/static/css/main.2ade5eca.css",
-    "main.js": "/react-portfolio/static/js/main.79bdf381.js",
+    "main.js": "/react-portfolio/static/js/main.6cfb9c4d.js",
     "static/js/787.9fa3d4ba.chunk.js": "/react-portfolio/static/js/787.9fa3d4ba.chunk.js",
     "static/media/background2.jpeg": "/react-portfolio/static/media/background2.f1db6d820557abf52b66.jpeg",
     "static/media/SAGAR_PANDAV_Resume.pdf": "/react-portfolio/static/media/SAGAR_PANDAV_Resume.b082d5f9de399c89d272.pdf",
     "static/media/profile2.jpeg": "/react-portfolio/static/media/profile2.0ff6bc66f0d4709ff64c.jpeg",
     "index.html": "/react-portfolio/index.html",
     "main.2ade5eca.css.map": "/react-portfolio/static/css/main.2ade5eca.css.map",
-    "main.79bdf381.js.map": "/react-portfolio/static/js/main.79bdf381.js.map",
+    "main.6cfb9c4d.js.map": "/react-portfolio/static/js/main.6cfb9c4d.js.map",
     "787.9fa3d4ba.chunk.js.map": "/react-portfolio/static/js/787.9fa3d4ba.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.2ade5eca.css",
-    "static/js/main.79bdf381.js"
+    "static/js/main.6cfb9c4d.js"
   ]
 }
