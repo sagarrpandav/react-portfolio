@@ -1,18 +1,18 @@
 {
   "files": {
     "main.css": "/react-portfolio/static/css/main.2ade5eca.css",
-    "main.js": "/react-portfolio/static/js/main.372b6a97.js",
+    "main.js": "/react-portfolio/static/js/main.17778348.js",
     "static/js/787.9fa3d4ba.chunk.js": "/react-portfolio/static/js/787.9fa3d4ba.chunk.js",
     "static/media/background2.jpeg": "/react-portfolio/static/media/background2.f1db6d820557abf52b66.jpeg",
     "static/media/SAGAR PANDAV_Resume.pdf": "/react-portfolio/static/media/SAGAR PANDAV_Resume.e210420573de2cd0ed85.pdf",
     "static/media/profile2.jpeg": "/react-portfolio/static/media/profile2.0ff6bc66f0d4709ff64c.jpeg",
     "index.html": "/react-portfolio/index.html",
     "main.2ade5eca.css.map": "/react-portfolio/static/css/main.2ade5eca.css.map",
-    "main.372b6a97.js.map": "/react-portfolio/static/js/main.372b6a97.js.map",
+    "main.17778348.js.map": "/react-portfolio/static/js/main.17778348.js.map",
     "787.9fa3d4ba.chunk.js.map": "/react-portfolio/static/js/787.9fa3d4ba.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.2ade5eca.css",
-    "static/js/main.372b6a97.js"
+    "static/js/main.17778348.js"
   ]
 }
